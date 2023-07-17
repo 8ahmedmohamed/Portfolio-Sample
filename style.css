@@ -109,6 +109,7 @@ section{
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 30px;
+    cursor: default;
 }
 
 .content{
@@ -128,8 +129,17 @@ section{
     transition: 0.7s ease;
 }
 
+#services .card{
+    width: 21.25em;
+}
+
+#contact .card{
+    width: 27.25em;
+}
+
 .card:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .icon{
@@ -139,6 +149,7 @@ section{
 }
 
 .info{
+    display: block;
     text-align: center;
 }
 
@@ -170,11 +181,11 @@ section{
 
 .project-card:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .project-image img{
     width: 100%;
-    height: 200px;
 }
 
 .project-card:hover .project-image{
@@ -215,8 +226,14 @@ section{
     color: #000;
 }
 
-.contact .info p{
+.contact .info .contact-info{
+    text-decoration: none;
     font-size: 1.2em;
+    color: #000;
+}
+
+.contact .info .contact-info:hover{
+    color: #3a6cf4;
 }
 
 .footer{
@@ -241,7 +258,7 @@ section{
     padding: 0 12px 0 0;
 }
 
-@media (max-width:1023px){
+@media (max-width:1024px){
     header{
         padding: 12px 20px;
     }
@@ -265,14 +282,19 @@ section{
     .main-content h3{
         font-size: 1.6em;
     }
+}
 
-    .content{
-        flex-direction: column;
-        align-items: center;
+@media (max-width:768px){
+    #services .card{
+        width: 20.25em;
+    }
+
+    .project-card {
+        width: 20em;
     }
 }
 
-@media (max-width:641px){
+@media (max-width:667px){
     body{
         font-size: 12px;
     }
@@ -284,9 +306,27 @@ section{
     .main-content h3{
         font-size: 1.4em;
     }
+
+    section{
+        padding: 30px 10px;
+    }
+
+    section.main {
+        padding: 100px 20px 80px;
+    }
+
+    #services .card{
+        width: 17em;
+        padding: 0px 10px;
+    }
+
+    #contact .card {
+        width: 23.25em;
+        padding: 15px;
+    }
 }
 
-@media (max-width:300px){
+@media (max-width:375px){
     body{
         font-size: 10px;
     }
